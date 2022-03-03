@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<!-- this is navigation bar -->
+<section>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./images/logo.svg"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end pe-5" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Services</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link text-light" href="#">Projects</a>
+          </li>
+          <li class="nav-item dropdown pe-5">
+            <a href="#" class="nav-link text-light contact-navbar rounded-pill text-uppercase fw-bolder">
+              Contact 
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section> 
+
+
+<!-- This is header -->
+<section>
+  <header class="mt-0 container-fluid">
+    <div class="pt-5">
+      <h1 class="text-uppercase fw-bold text-light text-center header-title lh-lg">We are Creatives</h1>
+      <div class="text-center">
+        <img src="./images/icon-arrow-down.svg" class="icon-header">
+      </div>
+      <div class="text-center">
+        <img src="./images/desktop/image-header.jpg" class="img-fluid" width="1000">
+      </div>
+    </div>
+  </header>
+</section>
+
+
+<!-- This is main page -->
+<section>
+  <!-- 1 -->
+  <main class="container-fluid g-0">
+  <div class="row g-0">
+    <div class="col-lg-6 mt-5">
+      <div class="mt-5 ps-4 mb-5">
+        <h1 class="mb-4 col-lg-7">Transform your brand</h1>
+        <p class="col-lg-8 mb-5 text-secondary">
+            We are full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do most of the marketing for you
+        </p>
+        <a href="#" class="text-decoration-none text-dark text-uppercase desc-font first-underlined">Learn More</a>
+      </div>
+    </div>
+    <div class="col-lg-6 img-main-1">
+      <img src="./images/desktop/image-transform.jpg" class="img-fluid">
+    </div>
+  </main>
+
+  <!-- 2 -->
+  <main class="container-fluid g-0">
+    <div class="row g-0">
+    <div class="col-lg-6 img-main-2">
+      <img src="./images/desktop/image-stand-out.jpg" class="img-fluid">
+    </div>  
+    <div class="col-lg-6 mt-5">
+      <div class="mt-5 ps-4 mb-5">
+        <h1 class="mb-4 col-lg-9">Stand out to the right audience</h1>
+        <p class="col-lg-8 mb-5 text-secondary">
+          Using a collaborative formula of designers, researchers, photographers, videographers and copywriters, we'll build and extend your brand in digital places
+        </p>
+        <a href="#" class="text-decoration-none text-dark text-uppercase desc-font second-underlined">Learn More</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- 3 -->
+  <main class="container-fluid g-0 text-center">
+    <div class="row g-0 pb-5">
+    <div class="col-lg-6 img-main-3">
+      <div class="position-relative">
+        <img src="./images/desktop/image-graphic-design.jpg" class="img-fluid mb-5">  
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+          <h1 class="margin-img fs-3 desc-color">Graphic Design</h1>
+          <p class="col-lg-12 desc-color mb-5 mt-3">
+            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potentials client's attention.
+          </p>
+        </div>
+      </div>
+    </div>  
+    <div class="col-lg-6 img-main-4">
+      <div class="position-relative"> 
+        <img src="./images/desktop/image-photography.jpg" class="img-fluid mb-5">
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+          <h1 class="margin-img fs-3 desc-color">Photography</h1>
+          <p class="col-lg-12 desc-color mb-5 mt-3">
+            Increase your creadibility by getting the most stunning, high-quality photos that improve your bussines image.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- This is testimonial page -->
+<section>
+  <div class="container mt-5 text-secondary">
+    <h1 class="header-title fs-4 text-uppercase text-center">Client Testimonials</h1>
+      <div class="row text-center">
+        <div class="col-lg-4 mt-5">
+          <img src="./images/image-emily.jpg" class="rounded-circle">
+          <p class="mt-5 mb-5">
+            We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+          </p>
+          <a href="#" class="mt-5 desc-font text-decoration-none text-dark">Emily R</a>
+          <p class="fw-light job-title">Marketing director</p>
+          </div>
+          <div class="col-lg-4 mt-5">
+            <img src="./images/image-thomas.jpg" class="rounded-circle">
+            <p class="mt-5 mb-5">
+              Sunnyside's enthuasiasm coupled with their keen interest in our brand's success made it satisfying and enjoyable experience.
+            </p>
+            <a href="#" class="mt-5 desc-font text-decoration-none text-dark">Thomas S.</a>
+            <p class="fw-light job-title">Chief Operating Officer</p>
+          </div>
+          <div class="col-lg-4 mt-5 mb-5">
+            <img src="./images/image-jennie.jpg" class="rounded-circle">
+            <p class="mt-5 mb-5">
+              Incredible and result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended.
+            </p>
+            <a href="#" class="mt-5 desc-font text-decoration-none text-dark">Jennie F.</a>
+            <p class="fw-light job-title">Bussiness Owner</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- This is image -->
+<section>
+<div class="container-fluid mt-5 text-center g-0">
+  <div class="row g-0">
+    <div class="col-lg-3 mr-5">
+      <img src="./images/desktop/image-gallery-milkbottles.jpg" class="img-fluid">
+    </div>
+    <div class="col-lg-3">
+      <img src="./images/desktop/image-gallery-orange.jpg" class="img-fluid">
+    </div>
+    <div class="col-lg-3">
+      <img src="./images/desktop/image-gallery-cone.jpg" class="img-fluid">
+    </div>
+    <div class="col-lg-3">
+      <img src="./images/desktop/image-gallery-sugarcubes.jpg" class="img-fluid">
+    </div>
+</div>
+</section>
+
+<!-- This is Footer -->
+<section>
+  <footer class="text-center text-white">
+    <div class="container-fluid footer-color pt-5">
+      <a href="#"><img src="./images/footer.jpg"></a>
+      <div class="mt-4">
+        <a href="#" class="text-decoration-none pe-5 bar-footer">About</a>
+        <a href="#" class="text-decoration-none pe-5 bar-footer">Services</a>
+        <a href="#" class="text-decoration-none bar-footer">Projects</a>
+      </div>
+      <div class="mt-5 pb-5">
+       <a href="#"><i class="bi bi-facebook pe-3 icon-footer"></i></a>
+       <a href="#"><i class="bi bi-instagram pe-3 icon-footer"></i></a>
+       <a href="#"><i class="bi bi-twitter pe-3 icon-footer"></i></a>
+       <a href="#"><i class="bi bi-pinterest icon-footer"></i></a>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Dwi Rifki Novianto</a>.
+</div>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

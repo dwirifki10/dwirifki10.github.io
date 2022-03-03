@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+body {
+	font-family: 'Barlow', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: #3dbeff;
+}
+
+header {
+	position: relative;
+	background-color: #3dbeff;
+}
+
+h1 {
+	font-family: 'Fraunces', serif; ;
+}
+
+.contact-navbar {
+	font-family: serif;
+	width: 120px;
+	text-align: center;
+	background-color: #6fcefe;
+	font-size: 15px;
+	margin-top: 2px;
+}
+
+.contact-navbar:hover {
+	background-color: #ffffff;
+	color: hsl(167, 40%, 24%) !important;
+}
+
+.desc-color {
+	color: hsl(167, 40%, 24%) !important;
+}
+
+.desc-font {
+	font-family: 'Fraunces', serif;
+}
+
+.header-title {
+	font-family: 'Fraunces', serif;
+	letter-spacing: 10px;
+}
+
+.icon-header {
+	position: absolute;
+	height: 120px;
+	margin-top: 5%;
+	margin-left: -1%;
+}
+
+.margin-img {
+	margin-top: 100%;
+} 
+
+.img-main-1 {
+	background-color: hsl(51, 100%, 49%);
+}
+
+.img-main-2 {
+	background-color: hsl(7, 99%, 69%);
+}
+
+.img-main-3 {
+	background-color: #96d8ca;
+}
+
+.img-main-4 {
+	background-color: #5cccfc;
+}
+
+.footer-color {
+	background-color: #90d4c5;
+}
+
+.bar-footer {
+	 color: hsl(168, 34%, 41%);
+}
+
+.bar-footer:hover {
+	color: #ffffff;
+}
+
+.icon-footer {
+	color: hsl(168, 34%, 41%);
+}
+
+.icon-footer:hover {
+	color: #ffffff;
+}
+
+.second-underlined {
+	background-image: linear-gradient(to right, #f16a70, #f16a70);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 100% 8px;
+	border-radius: 5px;
+}
+
+.first-underlined {
+	background-image: linear-gradient(to right, #fad400, #fad400);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 100% 8px;
+	border-radius: 5px;
+}
+
+.job-title {
+	font-size: 12px;
+	font-weight: 400;
+}
+
+@media screen and (max-width: 980px) {
+	.icon-header {
+		margin-top: 1%;
+		margin-left: -4.5%;
+	}
+}
