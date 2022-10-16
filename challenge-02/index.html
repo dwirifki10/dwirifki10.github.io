@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Resume &middot Dwi Rifki Novianto</title>
+	<link rel="icon" type="image/x-icon" href="img/Icon.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<!-- navbar  -->
+		<nav class="navbar" id="topNav">
+			<a href="#home" class="active list nav-link">Home</a>
+			<a href="#about" class="list nav-link" onclick="scrollToAbout()">
+				About
+			</a>
+			<a href="#contact" class="list nav-link" onclick="scrollToContact()">	Contact
+			</a>
+			<a href="javascript:void(0)" class="icon" onclick="myNavbar()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</nav>
+	</header>
+
+	<!-- main content -->
+	<main>
+		<div id="content">
+			<div class="content-header">
+				<h2 class="description" >Hi Saya Dwi Rifki Novianto</h2>
+				<h3 class="description">Tentang Saya</h3>
+				<p class="description" id="typed"></p>
+			</div>
+			<div class="img-header">
+				<img src="img/Header.png" class="img-responsive" width="600" height="400">
+			</div>
+		</div>
+		<!-- article -->
+		<div class="container-article top-5" id="myAbout">
+			<article>
+				<h2 class="container-title">
+					<span class="title-article">
+						Teknologi yang pernah saya gunakan
+					</span>
+				</h2>
+				<div class="marquee">
+					<img src="img/technology/Laravel.png" width="250">
+					<img src="img/technology/Vue.png" width="200">
+					<img src="img/technology/Hapi.png" width="250">
+					<img src="img/technology/SQL.jpg" width="250">
+					<img src="img/technology/GraphQL.jpg" width="250">
+					<img src="img/technology/Bootstrap.png" width="150">
+					<img src="img/technology/Vuetify.png" width="250">
+					<img src="img/technology/Hasura.png" width="250">
+					<img src="img/technology/Netlify.jpeg" width="250">
+				</div>
+			</article>
+			<aside class="content-aside top-5" id="myContact">
+				<div class="container-img mb-2">
+					<div class="img-aside">
+						<img src="img/Aside.jpg" class="img-responsive rounded" width="600" height="400">
+					</div>
+				</div>
+				<div class="container-aside">
+					<div class="container-content">
+						<h2 class="container-title">
+							<span class="title-article">
+								Project yang pernah saya kerjakan	
+							</span>
+						</h2>
+						<div class="scroller-Y">
+							<!-- Bio -->
+							<div class="center">
+								<img src="img/Profile.jpeg" width="150" class="circle">
+								<p>Dwi Rifki Novianto</p>
+								<a href="https://github.com/dwirifki10" target="_blank">	
+									https://github.com/dwirifki10
+								</a>
+								<a href="https://www.linkedin.com/in/dwi-rifki-novianto-1b9b741ba/" target="_blank">
+									https://www.linkedin.com/in/dwi-rifki-novianto-1b9b741ba/
+								</a>
+							</div>
+
+							<!-- 1 -->
+							<h3>
+								<span class="title-article">Diskusiku</span>
+							</h3>
+							<p>Forum diskusi untuk berbagi cerita, pengalaman dan pengetahuan. Pada sistem diskusi ini dapat menyaring kata kasar di setiap interaksi user menggunakan algoritma Levenshtein Distance, dikembangkan menggunakan Javascript, Vue Js sebagai sisi client (Front-end), Hapi Js sebagai API dalam memfilter kata kasar dan Laravel sebagai sebuah service (Back-end). Teknologi lainya yang saya gunakan adalah : GraphQL dan Hasura</p>
+
+							<!-- 2 -->
+							<h3>
+								<span class="title-article">PMI Bondowoso</span>
+							</h3>
+							<p>Server Back-end dalam project ini telah dihentikan.
+							Dibangun menggunakan Laravel sebagai Back-end dan Vue Js sebagai Front-end, digunakan untuk menyelesaikan project akhir dalam mata kuliah Workshop Web Framework dan Workshop Mobile
+							</p>
+
+							<!-- 3 -->
+							<h3>
+								<span class="title-article">MidiShare</span>
+							</h3>
+							<p>Sebuah Web Apps Knowledge Management System yang menghubungkan pengguna dan sumber pengetahuan dari dalam maupun luar organisasi. Dikembangkan menggunakan Laravel 9 dengan arsitektur monolith.
+							</p>
+
+							<!-- 4 -->
+							<h3>
+								<span class="title-article">Sistem Monitoring Air Akuarium Ikan Koi</span>
+							</h3>
+							<p>Sebuah sistem IOT untuk monitoring kualitas air akuarium ikan koi yang dikembangkan menggunakan algoritma decision tree untuk mendapatkan hasil putusan tingkat kualitas air. Dirancang menggunakan mikrokontroller ESP8266 dengan sensor suhu (dsb18b20) serta sensor Ph air. 
+							</p>
+
+							<!-- 5 -->
+							<h3>
+								<span class="title-article">KosKosang</span>
+							</h3>
+							<p>Sebuah aplikasi berbasis website untuk pencarian kost (indekos) di Kabupaten Bondowoso menggunakan PHP Native dengan mengimplementasikan metode MVC (Model, View, Controller) 
+							</p>
+
+							<a href="https://github.com/dwirifki10" target="_blank">
+								<h5>And Many More 
+									<i class="fa fa-arrow-right"></i>
+								</h5>
+							</a>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</main>
+	
+	<!-- footer  -->
+	<footer class="container-footer top-5">
+		<p class="pt-10 small">Designed by &copy Dwi Rifki Novianto</p>
+		<p class="small">For completing Dicoding Submission</p>
+	</footer>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
