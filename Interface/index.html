@@ -9,7 +9,9 @@
 	<script type="text/javascript">
 		const data = document.getElementById("btn-1");
 		data.addEventListener("click", () => {
-			navigator.bluetooth.requestDevice();
+			navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
+			.then(device => { /* … */ })
+			.catch(error => { console.error(error); });
 		})
 	</script>
 </body>
