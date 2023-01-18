@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title></title>
+	<title>Monitoring With Chart JS</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-	<button id="btn-1">Click</button>
-	<script type="text/javascript">
-		const data = document.getElementById("btn-1");
-		data.addEventListener("click", () => {
-			navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
-			.then(device => { /* … */ })
-			.catch(error => { console.error(error); });
-		})
+
+	<h2 class="text-center fw-bold text-primary m-3">
+		Monitoring With Chart JS
+	</h2>
+	<div class="img-fluid">
+		<canvas id="myChart"></canvas>
+	</div>
+ 	<script type="text/javascript" src="index.js"></script>
+	<script>
+		let ctx = document.getElementById("myChart").getContext('2d');
+		let labels = [];
+		let count = 0;
+		let dataFirst = {
+			    label: "RPM",
+			    data: [],
+			    fill: false,
+			    backgroundColor : 'red',
+			    borderColor: 'red'
+		  	};
+		let dataSecond = {
+			    label: "Set Point",
+			    data: [10, 20, 30, 40],
+			    fill: false,
+			    backgroundColor : 'blue',
+			  	borderColor: 'blue'
+			};
+		setInterval(() => {
+			dataFirst.data.push(Math.floor(Math.random() * 31) + 25);
+			dataSecond.data.push(40);
+			labels.push(count + 5);
+			count = count + 5;
+			let myChart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: labels,
+					datasets: [dataFirst, dataSecond],
+				},
+			});
+		}, 5000);
 	</script>
 </body>
 </html>
