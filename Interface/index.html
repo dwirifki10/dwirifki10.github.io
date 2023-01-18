@@ -5,17 +5,12 @@
 	<title></title>
 </head>
 <body>
+	<button id="btn-1">Click</button>
 	<script type="text/javascript">
-		 navigator.bluetooth.requestDevice(
-    {
-        acceptAllDevices : true
-    })
-    .then(device => {
-        console.log('Got device');
-    })
-     .catch(error => {
-        console.log(error);
-    });
+		const data = document.getElementById("btn-1");
+		data.addEventListener("click", () => {
+			navigator.bluetooth.requestDevice();
+		})
 	</script>
 </body>
 </html>
