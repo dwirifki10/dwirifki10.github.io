@@ -54,10 +54,12 @@
 		     	return characteristic.readValue();
 		   	})
 		   	.then((value) => {
-		     	console.log('Battery percentage: ' + value.getUint8(0));
+		     	console.log('Battery percentage : ' + value.getUint8(0));
+		     	alert('Battery percentage : ' + value.getUint8(0));
 		   	})
 		   	.catch((error) => {
 		     	console.error(error);
+		     	alert(error);
 		});
 	} 
 	
