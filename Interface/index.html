@@ -43,16 +43,16 @@
 		    optionalServices: ['battery_service']
 		    })
 		    .then((device) => {
-		      	return device.gatt.connect()
+		      	device.gatt.connect();
 		   	})
 		   	.then((server) => {
-		     	return server.getPrimaryService('battery_service');
+		     	server.getPrimaryService('battery_service');
 		   	})
 		   	.then((service) => {
-		     	return service.getCharacteristic('battery_level');
+		     	service.getCharacteristic('battery_level');
 		   	})
 		   	.then((characteristic) => {
-		     	return characteristic.readValue();
+		     	characteristic.readValue();
 		   	})
 		   	.then((value) => {
 		     	console.log('Battery percentage : ' + value.getUint8(0));
