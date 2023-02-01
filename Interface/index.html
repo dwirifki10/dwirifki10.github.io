@@ -40,7 +40,7 @@
 	    alert('Bluetooth API is not supported on your browser.');
 	}
 	
-	const connect = async () => {
+	const connect = () => {
 		navigator.bluetooth.requestDevice({
 		    acceptAllDevices: true,
 		    optionalServices: ['battery_service']
@@ -51,7 +51,7 @@
 		   	.then(characteristic => characteristic.readValue())
 		   	.then((value) => {
 		   		connection.style.display = "none";
-		   		val.innerHTML = value.getUint8(0) + "%";
+		   		val.innerHTML = "Your battery percentage : " + value.getUint8(0) + "%";
 		     	alert('Battery percentage : ' + value.getUint8(0) + "%");
 		   	})
 		   	.catch((error) => {
