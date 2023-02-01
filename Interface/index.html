@@ -42,18 +42,10 @@
 		    acceptAllDevices:true,
 		    optionalServices: ['battery_service']
 		    })
-		    .then((device) => {
-		      	device.gatt.connect();
-		   	})
-		   	.then((server) => {
-		     	server.getPrimaryService('battery_service');
-		   	})
-		   	.then((service) => {
-		     	service.getCharacteristic('battery_level');
-		   	})
-		   	.then((characteristic) => {
-		     	characteristic.readValue();
-		   	})
+		    .then(device => device.gatt.connect())
+		   	.then(server => server.getPrimaryService('battery_service'))
+		   	.then(service => service.getCharacteristic('battery_level'))
+		   	.then(characteristic => characteristic.readValue())
 		   	.then((value) => {
 		     	console.log('Battery percentage : ' + value.getUint8(0));
 		     	alert('Battery percentage : ' + value.getUint8(0));
@@ -61,7 +53,7 @@
 		   	.catch((error) => {
 		     	console.error(error);
 		     	alert(error);
-		});
+			});
 	} 
 	
 
