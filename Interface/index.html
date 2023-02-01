@@ -41,7 +41,7 @@
 	}
 	
 	const connect = async () => {
-		await navigator.bluetooth.requestDevice({
+		navigator.bluetooth.requestDevice({
 		    acceptAllDevices: true,
 		    optionalServices: ['battery_service']
 		    })
