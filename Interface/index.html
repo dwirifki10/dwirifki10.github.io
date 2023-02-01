@@ -6,7 +6,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-	<link rel="icon" type="icon/png" href="https://brandslogos.com/wp-content/uploads/images/arduino-logo-1.png">
+	<link rel="icon" type="icon/png" href="logo.jpg">
 	<style type="text/css">
 		body{
 			font-family: 'Poppins', sans-serif;
@@ -21,6 +21,7 @@
 	<button class="btn btn-secondary btn-sm" id="connection" onclick="connect()">
 		Connect to Bluetooth
 	</button>
+	<span id="val"></span>
 </div>
 <div class="container">
 	<canvas id="myChart"></canvas>
@@ -31,15 +32,17 @@
 <script type="text/javascript" src="data.js"></script>
 
 <script>
+	const connection = document.getElementById("connection");
+	const val = document.getElementById("val");
 	if (!('bluetooth' in navigator)) {
-		document.getElementById("connection").disabled = true;
+		connection.disabled = true;
 	    console.log('Bluetooth API is not supported on your browser.');
 	    alert('Bluetooth API is not supported on your browser.');
 	}
 	
 	const connect = async () => {
-		navigator.bluetooth.requestDevice({
-		    acceptAllDevices:true,
+		await navigator.bluetooth.requestDevice({
+		    acceptAllDevices: true,
 		    optionalServices: ['battery_service']
 		    })
 		    .then(device => device.gatt.connect())
@@ -47,11 +50,11 @@
 		   	.then(service => service.getCharacteristic('battery_level'))
 		   	.then(characteristic => characteristic.readValue())
 		   	.then((value) => {
-		     	console.log('Battery percentage : ' + value.getUint8(0));
-		     	alert('Battery percentage : ' + value.getUint8(0));
+		   		connection.style.display = "none";
+		   		val.innerHTML = value.getUint8(0) + "%";
+		     	alert('Battery percentage : ' + value.getUint8(0) + "%");
 		   	})
 		   	.catch((error) => {
-		     	console.error(error);
 		     	alert(error);
 			});
 	} 
