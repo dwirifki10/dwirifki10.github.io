@@ -41,16 +41,16 @@
 	
 	const connect = () => {
 		navigator.bluetooth.requestDevice({
-		    filters: [{ name: 'ESP_VRAC_Ready' }]
+		    acceptAllDevices: true,
 		    })
 		    .then(device => device.gatt.connect())
-		   	.then(server => server.getPrimaryService('24:D7:EB:0F:CC:92'))
-		   	.then(service => service.getCharacteristic('24:D7:EB:0F:CC:92'))
+		   	.then(server => server.getPrimaryService('4fafc201-1fb5-459e-8fcc-c5c9c331914b'))
+		   	.then(service => service.getCharacteristic('beb5483e-36e1-4688-b7f5-ea07361b26a8'))
 		   	.then(characteristic => characteristic.readValue())
 		   	.then((value) => {
 		   		connection.style.display = "none";
-		   		val.innerHTML = "Your battery percentage : " + value.getUint8(0) + "%";
-		     	alert('Battery percentage : ' + value.getUint8(0) + "%");
+		   		val.innerHTML = "Value : " + value.getUint8(0) + "%";
+		     	alert('Value : ' + value.getUint8(0) + "%");
 		   	})
 		   	.catch((error) => {
 		     	alert(error);
