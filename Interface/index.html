@@ -43,11 +43,11 @@
 	const connect = () => {
 		navigator.bluetooth.requestDevice({
 		    acceptAllDevices: true,
-		    optionalServices: ['battery_service']
+		    optionalServices: ['ESP_VRAC_Ready']
 		    })
 		    .then(device => device.gatt.connect())
-		   	.then(server => server.getPrimaryService('battery_service'))
-		   	.then(service => service.getCharacteristic('battery_level'))
+		   	.then(server => server.getPrimaryService('ESP_VRAC_Ready'))
+		   	.then(service => service.getCharacteristic('ESP_VRAC_Ready'))
 		   	.then(characteristic => characteristic.readValue())
 		   	.then((value) => {
 		   		connection.style.display = "none";
