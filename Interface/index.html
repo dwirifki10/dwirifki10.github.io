@@ -41,7 +41,6 @@
 	
 	const connect = () => {
 		navigator.bluetooth.requestDevice({
-		    acceptAllDevices: true,
 		    filters: [{ name: 'ESP_VRAC_Ready' }]
 		    })
 		    .then(device => device.gatt.connect())
