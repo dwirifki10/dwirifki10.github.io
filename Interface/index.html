@@ -39,15 +39,23 @@
 	    console.log('Bluetooth API is not supported on your browser.');
 	    alert('Bluetooth API is not supported on your browser.');
 	}
+
+	// Kode JavaScript
+	var SerialPort = require('serialport');
+	var port = new SerialPort('COM3', { baudRate: 115200 });
+
+	port.on('data', function (data) {
+		console.log('Data:', data.toString());
+	});
 	
 	const connect = () => {
 		navigator.bluetooth.requestDevice({
 		    acceptAllDevices: true,
-		    optionalServices: ['b4:9d:02:3e:48:be']
+		    optionalServices: ['battery_service']
 		    })
 		    .then(device => device.gatt.connect())
-		   	.then(server => server.getPrimaryService('b4:9d:02:3e:48:be'))
-		   	.then(service => service.getCharacteristic('b4:9d:02:3e:48:be'))
+		   	.then(server => server.getPrimaryService('battery_service'))
+		   	.then(service => service.getCharacteristic('battery_level'))
 		   	.then(characteristic => characteristic.readValue())
 		   	.then((value) => {
 		   		connection.style.display = "none";
